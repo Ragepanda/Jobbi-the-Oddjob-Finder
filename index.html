@@ -1,0 +1,35 @@
+<html>
+<head> <title> a8 </title> </head>
+
+<body>
+	<p> Currently my web app can create a new instance, and retrieve an index of instance ids. The other three criteria will be added in as methods in my ORM table class,
+		labeled jobbiset.php. There will be added functionality to remove posts by id in response to the "report" button. The report button will also update the "reportCount" value
+		in the table, and when the value is 5 or higher, the post will be deleted. Given that I have an exam tomorrow, I've decided to shelf off this functionality until a little 
+		later, I hope you understand. 
+	</p>
+	
+	<p>
+		For the time being, I've demonstrated that I can load my database entries into Jobbi, and that I can create new ones in a RESTful style that
+		tears down the posts and retrieves them from the database without reloading the page. I decided to use Jquery in my jobbi.js file to remove all posts from the
+		DOM, to account for people from different IPs uploading. The finished product will limit the posts to a total of 25 on the page, which is why the teardown is important.
+		
+	</p>
+	
+	<p>
+		Under the addRequest() method in Jobbi.js, I have an ajax method to send newly entered information to PHP, encoded using the .post jquery method. Right now,
+		POST is the format used for passing new post info to PHP to generate a new table entry, this can be found in callback.php, which is linked to jobbiset.php, the 
+		ORM file containing the a8_jobbi (database) methods. All parameters being sent by the $.post method are not mandatory, which means posts with some entries empty can be made.
+		Here is the <a href=http://wwwp.cs.unc.edu/Courses/comp426-f14/jwoltz/a8/jobbi.html>link</a> to the main page. If you enter in your information, a new post will be made.
+		The email is encapsulated in the database so that users cannot see it, when the project is fully completed, PHP will generate a message to the original poster via e-mail, using 
+		the attached id. 
+	
+	</p>
+	
+	<p> Update: 12/5/14, 7:45PM. I showed the site to a friend, who then tried to do an input, and I found out that requests won't work if they exceed a certain length. I'll have it
+		fixed for the final presentation, but I just wanted you to be aware of it as you test it. 
+	</p>
+	
+		<a href=http://wwwp.cs.unc.edu/Courses/comp426-f14/jwoltz/a8/jobbi.html>In case you glossed over it in the summary, here's a link to the page.</a>
+</body>
+
+</html>

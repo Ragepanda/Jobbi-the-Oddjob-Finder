@@ -1,0 +1,57 @@
+h1,h2{
+	color: #33CCFF;
+	margin-left:45%;
+	margin-right:50%;
+}
+
+h1{
+font-size: 48px;
+}
+
+body {
+ font-family: "Arial", Times, serif;
+ color: black;
+ background-color: #C8C8C8;
+}
+
+.post{
+border-style: solid;
+border-width: 3px;
+border-color: #33CCFF;
+margin-bottom: 8px;
+}
+
+.post>span{
+font-size: 15px;
+margin-left: 20px;
+}
+
+.post>p{
+margin-left:12px;
+
+}
+
+.post>.payment{
+margin-left: 20px;
+margin-right: 12px;
+}
+
+.content{
+font-size: 20px;
+}
+
+.buttons{
+margin-top: 10px;
+margin-left: 20px;
+}
+
+#submitRequest{
+margin-top: 15px;
+margin-bottom: 5%;
+}
+
+#actualRequest{
+width:24%;
+height: 8%;
+size:250;
+}
