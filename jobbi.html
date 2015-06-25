@@ -1,37 +1,77 @@
-<!DOCTYPE html>
-
 <html>
 <head>
 <title> Jobbi the Oddjob Marketplace</title>
 <link rel="stylesheet" type="text/css" href="a3.css">
-
-
-<script src="http://www.cs.unc.edu/Courses/comp426-f14/jquery-1.11.1.js"
-          type="text/javascript">
-	 </script>
-		  
-<script src="jobbi.js" type="text/javascript">
-	</script>
-
-		  
 <h1>Jobbi</h1>
+
+<script src="jobbi.js">
+</script>
+<script src="http://www.cs.unc.edu/Courses/comp426-f14/jquery-1.11.1.js"
+          type="text/javascript"></script>
 </head>
 
 <body>
 	<div id="introduction">
 		<p>
-		Welcome to Jobbi! The local, anonymous oddjob market. Type in a request at the bottom, and it will be listed on the page, front and center for all oddjobbers looking out there!
+			The application I want to develop is an open request board for people who need a quick, one-time job done.
+			In this design there would be two interfaces, one for people looking for things to do, in which they can offer their services, 
+			and the other for requests. The design will be a straightforward posting setup where users can fill out a form, either as 
+			a requester or as a serviceperson, after which their job/offer will be posted. There will be optional fields for pay and location. 
+			People will be able to respond to ads by typing in a message into form that the posts will link to, which will then send the poster an 
+			e-mail on the account they registered.
+		</p>
+		<p>
+			My first stretch goal is to include a report option for requests that appear offensive or illegal in nature, and after a certain number of
+			reports, the ad will be taken down. To prevent potential abuse I would only allow downvotes from a single IP address. At this point 
+			I haven't decided as to whether I'm going to use a Bootstrap implementation or one of my own personal design. This assignment will involve
+			a few javascript objects and a strong back end storage solution to store them, since this service would require that I keep on hand the email of
+			all of the requesters/servicers. 
 		</p>
 		
-		
-		
+		<p>
+			Below is a CSS implementation of how I want my layout to look.
+		</p>
 	</div>
 	
-	<h2> Requests </h2>
-	
 	<div class="board" id="request">
+		<h2> Requests </h2>
+		
+			<div class="post">
+				<p class="content"> I need somebody to go to the grocery store and grab a few items for me. </p> 
+					<span class="payment"> Pay: $25 </span>    <span class="location"> Location: UNC Campus </span>
+				<div>
+					<form class="buttons">
+						<input type="button" id="contact" value="Contact"> 
+						<input type="button" id="report" value="Report"> 
+						<input type="button" id="forward" value="Forward"> 
+					</form>
+				</div>
+			</div>
+		
+			<div class="post">
+				<p class="content"> I really want to learn how to play chess. Anybody want to teach me?</p>
+					<span class="payment"> Pay: $25 </span>    <span class="location"> Location: UNC Campus </span>
+				<div>
+					<form class="buttons">
+						<input type="button" id="contact" value="Contact"> 
+						<input type="button" id="report" value="Report"> 
+						<input type="button" id="forward" value="Forward"> 
+					</form>
+				</div>
+			</div>
+			
+			<div class="post">
+				<p class="content"> LF someone to deliver a package to a drop point. No questions asked. </p> <br>
+					<span class="payment"> Pay: $1000</span>    <span class="location"> Location: Las Vegas </span>
+				<div>
+					<form class="buttons">
+						<input type="button" id="contact" value="Contact"> 
+						<input type="button" id="report" value="Report"> 
+						<input type="button" id="forward" value="Forward"> 
+					</form>
+				</div>
+			</div>
 	
-
 		
 	</div>
 	
